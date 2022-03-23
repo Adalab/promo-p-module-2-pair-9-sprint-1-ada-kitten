@@ -2,11 +2,58 @@
 console.log ('Hola');
 const formElement = document.querySelector('.new-form');
  
- if (formElement.classList.contains('collapsed')) {
+ /* if (formElement.classList.contains('collapsed')) {
   formElement.classList.remove('collapsed');
 } else {
   formElement.classList.add('collapsed');
-}
+} */
+
+
+const item = document.querySelector('.item');
+item.addEventListener("click", (event) =>{
+  event.preventDefault();
+  formElement.classList.toggle('collapsed');
+}); //toggle cuando la das la pone o la quita (como add / remove) 
+
+const inputDesc = document.querySelector(".js-input-desc");
+const inputPhoto = document.querySelector(".js-input-photo");
+const inputName = document.querySelector(".js-input-name");
+const labelMesageError = document.querySelector(".js-label-error");
+
+
+const button = document.querySelector('.js-btn-add');
+button.addEventListener("click", (event) =>{
+  event.preventDefault();
+  const valueDesc = inputDesc.value;
+  const valuePhoto = inputPhoto.value;
+  const valueName = inputName.value;
+
+  if (valueDesc === "" && valuePhoto === "" && valueName === "") {
+    labelMesageError.innerHTML = 'Debe rellenar todos los valores';
+    console.log('Debe rellenar todos los valores');
+  } else {}
+});
+
+
+const race = document.querySelector('.js-race ');
+const search = document.querySelector('.js-button');
+const js_in_search_desc = document.querySelector('.js_in_search_desc');
+const error = document.querySelector('.js-error');
+
+search.addEventListener ("click", (event) =>{
+  event.preventDefault();
+    const valueRace = race.value;
+    const valueJs_in_search_desc = js_in_search_desc.value;
+    if (valueRace === "" || valueJs_in_search_desc === "")
+    {error.innerHTML = 'Debe rellenar todos los valores'} else {}
+  });
+
+  const cancel = document.querySelector('.js-button-cancel');
+  cancel.addEventListener("click", (event) =>{
+    event.preventDefault();
+    formElement.classList.add('collapsed');
+  });
+
 
 const listElement= document.querySelector(".list");
 
