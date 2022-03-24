@@ -28,7 +28,7 @@
         <h1>AdaKitten</h1>
         <nav class="menu-nav">
           <ul class="menu">
-            <li class="item">
+            <li class="item js-item">
               <span class="fas fa-plus-circle"> </span>
             </li>
           </ul>
@@ -46,9 +46,19 @@
             placeholder="Url de la foto"
             required
           />
-          <input class="input js-input-name" type="text" placeholder="Nombre" required />
+          <input
+            class="input js-input-name"
+            type="text"
+            placeholder="Nombre"
+            required
+          />
           <input class="input" type="text" placeholder="Raza" />
-          <input class="input js-input-desc" type="text" placeholder="Descripción" required />
+          <input
+            class="input js-input-desc"
+            type="text"
+            placeholder="Descripción"
+            required
+          />
           <label class="js-label-error"></label>
           <button class="button js-btn-add">Añadir</button>
           <button class="button-cancel js-button-cancel">Cancelar</button>
@@ -63,7 +73,11 @@
       <section class="search">
         <h2 class="title">Filtrar / Buscar</h2>
         <form class="form">
-          <input class="input js_in_search_desc" value="cariñoso" type="text" placeholder="Descripción" />
+          <input
+            class="input js_in_search_desc"
+            type="text"
+            placeholder="Descripción"
+          />
           <input
             class="input js-race"
             type="select"
