@@ -1,11 +1,6 @@
 "use strict"; 
+//constantes
 const formElement = document.querySelector('.new-form');
- 
- /*if (formElement.classList.contains('collapsed')) {
-  formElement.classList.remove('collapsed');
-} else {
-  formElement.classList.add('collapsed');
-} */
 
 
 const item = document.querySelector('.js-item');
@@ -25,6 +20,9 @@ const nameUpperCase1 = kittenName1.toUpperCase();
 const kittenDesc1 =
   "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
 const kittenRace1 = "British Shorthair";
+
+
+
 
 const listElement= document.querySelector(".list");
 const kittenImage2 = "https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg" ;
@@ -101,6 +99,11 @@ search.addEventListener ("click", (event) =>{
 
 /*const listElement= document.querySelector(".list");*/
 
+
+
+
+
+
 function renderKitten(kittenData) {
   
   return `<li class="card"><article><img class="card_img" src="${kittenData.image}" alt="gatito"/><h3 class="card_title">${kittenData.name}</h3><h4 class="card_race">${kittenData.race}</h4><p class="card_description">${kittenData.desc} </p></article></li>`;
@@ -135,6 +138,9 @@ const kittenData_3 = {
   race: 'British Shorthair',
 };
 
+
+
+
 /*if( kittenDesc1.includes(descrSearchText)  ) {
   const content1 = renderKitten(kittenData_1);
   listElement.innerHTML = content1;
@@ -151,6 +157,11 @@ if( kittenDesc3.includes(descrSearchText)  ) {
 const content3 = renderKitten(kittenData_3);
 listElement.innerHTML = listElement.innerHTML + content3;
 }*/
+
+
+
+
+
 
 
 
