@@ -1,4 +1,4 @@
-"use strict"; 
+'use strict'
 const formElement = document.querySelector('.new-form');
  
  /*if (formElement.classList.contains('collapsed')) {
@@ -151,53 +151,3 @@ if( kittenDesc3.includes(descrSearchText)  ) {
 const content3 = renderKitten(kittenData_3);
 listElement.innerHTML = listElement.innerHTML + content3;
 }*/
-
-
-
-const kittenDataList = [
-  {
-  image: 'https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg',
-  name: 'Anastacio',
-  desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
-  race: 'British Shorthair',},
-  {
-  image: 'https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg',
-  name: 'Fiona',
-  desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
-  race: 'British Shorthair',
-  },
-  {
-  image: 'https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg',
-  name: 'Cielo',
-  desc: 'Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!',
-  race: 'British Shorthair'
-  },
-];
-
-//const listElement= document.querySelector(".list");
-
-function renderKittenList(kittenDataList) {
-  for (let i=0; i < kittenDataList.length; i ++) {
-    listElement.innerHTML += renderKitten(kittenDataList[i]);
-  }
-}
-renderKittenList(kittenDataList);
-
-
-
-function filterKitten(event) {
-  event.preventDefault();
-  const descrSearchText = input_search_desc.value;
-  listElement.innerHTML = '';
-  for (const kittenItem of kittenDataList) {
-    if (kittenItem.desc.includes(descrSearchText)) {
-      listElement.innerHTML += kittenOne;
-    }
-    if (kittenItem.desc.includes(descrSearchText)) {
-      listElement.innerHTML += kittenTwo;
-    }
-    if (kittenDesc3.desc.includes(descrSearchText)) {
-      listElement.innerHTML += kittenThree;
-    }
-  }
-}
